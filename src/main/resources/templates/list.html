@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout.html}">
+
+<head>
+  <title>목록</title>
+</head>
+
+<body>
+  <section layout:fragment="content">
+    <div class="question" th:each="q: ${questions}">
+      <a th:href="${'/' + q.id}" th:text="${'Q ' + q.question}">Q </a>
+    </div>
+    <nav class="pagination">
+      <span th:each="i: ${#numbers.sequence(1, questions.totalPages)}">
+        <a th:href="${'/list?page=' + i}" th:text="${i}"></a>
+      </span>
+    </nav>
+  </section>
+</body>
+
+</html>

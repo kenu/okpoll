@@ -1,0 +1,102 @@
+#wrap {
+  width: 356px;
+  margin: auto;
+  border: 1px solid #666;
+  padding: 0;
+}
+h2 {
+  margin-left: 8px;
+  margin-bottom: 0;
+}
+.question {
+  font-size: 1.4em;
+  padding: 0 16px 10px;
+  word-wrap: normal;
+}
+.answers {
+  text-align: center;
+}
+
+.answer {
+  font-size: x-large;
+}
+
+.answer,
+.login,
+.create {
+  width: 90%;
+  box-sizing:content-box;
+  border: 1px solid #eee;
+  min-height: 2.5em;
+  border-radius: 10px;
+  margin: 2px;
+}
+
+#question {
+  width: 90%;
+}
+
+#user {
+  border: 0;
+}
+
+#list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.answered {
+  width: 90%;
+  box-sizing:content-box;
+  border: 1px solid #eee;
+  min-height: 2.5em;
+  border-radius: 10px;
+  margin: 2px auto;
+  color: #696;
+  font-size: x-large;
+}
+
+.pagination {
+  text-align: center;
+}
+
+#login-form {
+  margin: 60px 0 160px;
+  text-align: center;
+}
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+#name {
+  width: 90%;
+  padding: 2px 6px;
+  border: 1px solid #eee;
+  height: 2.2em;
+  border-radius: 10px;
+  margin: 2px;
+}
+
+#question-form {
+  margin: 60px 0 160px;
+  text-align: center;
+}
+
+#share input {
+  margin-right: 20px;
+  font-size: xx-small;
+  text-align: right;
+  width: 96%;
+  border: 0;
+}
+
+header,
+footer {
+  text-align: center;
+}
+footer {
+  border-top: 1px dashed #ccc;
+  margin-top: 30px;
+  padding: 20px 0 10px;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout.html}">
+
+<head>
+  <title>Result</title>
+</head>
+
+<body>
+  <section layout:fragment="content">
+    <div id="share"><input th:value="'https://v.okdevtv.com/' + ${question.id}" readonly></div>
+
+    <h2>Q</h2>
+    <div class="question" th:text="${question.question}"></div>
+    <h2>A</h2>
+    <div class="answers">
+      <div class="answered"
+              th:each="a : ${answers}"
+              th:text="${a.answer + ' ' + a.cnt + '(' + a.percent + '%)'}"
+              th:data-aid="${a.id}"
+      >없다</div>
+    </div>
+    <script>
+      const el = document.querySelector('#share input');
+      el.addEventListener('focus', (evt) => {
+        const i = evt.currentTarget;
+        i.select();
+        const successful = document.execCommand('copy');
+        if (successful) {
+          alert('copied');
+        };
+        el.blur();
+      });
+    </script>
+  </section>
+</body>
+
+</html>

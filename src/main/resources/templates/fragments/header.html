@@ -1,0 +1,15 @@
+<header th:fragment="header">
+  <h1>OkVote</h1>
+  <nav>
+    <a href="/">Home</a> |
+    <span th:if="!${session.name}">
+      <a href="/login">Login</a> |
+    </span>
+    <span th:if="${session.name}">
+      <a href="/logout">Logout</a> |
+    </span>
+    <a href="/form">Form</a> |
+    <a href="/list">List</a>
+  </nav>
+  <hr>
+</header>
